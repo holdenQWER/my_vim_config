@@ -1,0 +1,54 @@
+source $HOME/.alias
+setenv NOVAS_EDIT_SOURCE 1
+setenv TRANSACTION_PROTOCOL_SUPPORT
+
+##### for verdi  ####
+setenv NOVAS_RC $HOME/verdi_config/novas.rc
+setenv NOVAS_GUICONF $HOME/verdi_config/novas.conf
+
+##### tool #####
+setenv VC_STATIC_HOME  /home/holden/Tool/synopsys/vc_static/vc_static/S-2021.09
+setenv VCS_HOME /home/holden/Tool/synopsys/vcs/vcs/P-2019.06-SP2-12
+setenv DC_HOME /home/holden/Tool/synopsys/DC/syn/P-2019.03-SP4
+setenv VERDI_HOME /home/holden/Tool/synopsys/verdi/verdi/P-2019.06-SP2-12
+setenv SCL_HOME /home/holden/Tool/synopsys/scl/scl/2021.03
+#setenv SCL_HOME /home/holden/Tool/VIP_21/scl/scl/2021.03
+#2018-09 cracked
+#setenv DESIGNWARE_HOME /home/holden/Tool/synopsys/dw_vip
+
+set path = ( $VCS_HOME/bin $path)
+set path = ( /home/holden/fzf $path)
+set path = ( /home/holden/ripgrep/ripgrep-13.0.0-x86_64-unknown-linux-musl $path)
+set path = ( $VERDI_HOME/bin $path )
+set path = ( $DC_HOME/bin $path )
+set path = ($path $VC_STATIC_HOME/bin)
+set path = ($path $SCL_HOME/linux64/bin)
+
+#2021-09 cracked
+#setenv DESIGNWARE_HOME /home/holden/Tool/synopsys/dw_usb
+# testsuit
+#setenv DESIGNWARE_HOME /home/holden/Tool/synopsys/dw_ts
+# iip usb
+setenv DESIGNWARE_HOME /home/holden/Tool/synopsys/dw_for_iip
+# iip pcie
+setenv DESIGNWARE_HOME /home/holden/Tool/synopsys/dw_for_iip_pcie
+set path = ($path $DESIGNWARE_HOME/bin)
+
+setenv LM_LICENSE_FILE  27000@localhost.localdomain
+alias slm  'lmgrd -c /home/holden/Tool/synopsys/license/Synopsys.dat'
+
+## DVT21
+#alias dvt '/home/holden/Tool/dvt_eclipse_21/bin/dvt.sh &'
+#setenv DVT_LICENSE_FILE  2700
+#setenv DVT_HOME /home/holden/Tool/dvt_eclipse_21
+
+## DVT20
+setenv DVT_HOME /home/holden/Tool/dvt_eclipse
+setenv DVT_LICENSE_FILE /home/holden/Tool/dvt_eclipse/dvt.lic
+alias dvt '/home/holden/Tool/dvt_eclipse/bin/dvt.sh &'
+
+setenv LD_LIBRARY_PATH /lib64
+
+#setenv VCS_HOME /home/holden/Tool/synopsys/vc_static/vc_static/S-2021.09/vcs-mx
+#setenv VERDI_HOME /home/holden/Tool/synopsys/vc_static/vc_static/S-2021.09/verdi
+

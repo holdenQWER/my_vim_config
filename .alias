@@ -1,0 +1,53 @@
+#!/bin/tcsh
+
+#Find "*svip" | xargs perl -p -i -e 's/^(.*\`protected.*)$/\/\/$1/g'
+alias cd 'cd \!*;wd;ls'
+alias wd 'set prompt = "\n`whoami`@"`hostname`":${cwd}\n>"'
+alias ss 'source ~/.tcshrc'
+alias .. "cd .."
+alias ... "cd ../../"
+alias .... "cd ../../../"
+
+alias ls 'ls -hF --color'
+alias lr 'll -R'
+alias lt 'ls -ltrh'
+alias la 'ls -a'
+alias grep 'grep -r -I -n --color'
+alias cp 'cp -i'
+alias mv 'mv -i'
+alias rm 'rm -i'
+alias h 'history'
+alias g 'gvim'
+#alias python 'python3'
+#alias pip 'pip3'
+alias WC 'find . -name "*.v" | xargs wc -l'
+#alias pdf 'okular'
+alias pdf 'evince'
+#alias pdf 'acroread'
+
+alias pf 'ps -ef | grep hongzhen'
+alias pu 'ps u'
+alias kl 'kill -9'
+alias dm 'du -h --max-depth=1'
+alias Find 'find . -name'
+alias ssh 'ssh -X'
+alias office '/usr/bin/soffice'
+alias me 'top -u hongzhen'
+
+######for git #######
+#alias gs 'git status'
+#alias gr 'git checkout HEAD'
+#alias gitp 'git push origin master'
+#alias gitla 'git log --decorate --graph -all'
+#alias gitst 'git status --short'
+#alias gitco 'git checkout'
+#alias gitci 'git commint'
+
+#alias grepdir 'find.|xargs grep -l $1'
+#alias load 'module load projects'
+#alias help "cdnshelp&"
+#alias nome "gnome-terminal&"
+#alias ll "ls -lv --group-directories-first"
+#alias cpu 'mpstat -P ALL'
+#alias pkillwave 'pkill -u "hongzhen" "simvision.exe"'
+#alias share 'cd /mnt/hgfs/05_VMware_share'
